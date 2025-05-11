@@ -102,14 +102,11 @@ function checkBirthday() {
     const input = document.getElementById('birthdayInput').value.trim();
     const error = document.getElementById('birthdayError');
     
-    // Get current date - for the special day
-    const today = new Date();
-    const mm = String(today.getMonth() + 1).padStart(2, '0');
-    const dd = String(today.getDate()).padStart(2, '0');
-    const todayFormatted = `${mm}/${dd}`;
+    // The special birthday date (May 12th in DD/MM format)
+    const specialDate = "12/05";
     
-    // Check if input matches today's date
-    if (input === todayFormatted) {
+    // Check if input matches the special date
+    if (input === specialDate) {
         // Success! Move to next step
         nextStep(7);
         triggerConfetti();
